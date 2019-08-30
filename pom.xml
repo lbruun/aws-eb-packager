@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>net.lbruun.aws.ebpackager</groupId>
+    <artifactId>parent</artifactId>
+    <version>0.9.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>AWS Elastic Beanstalk Packager - Parent</name>
+
+    <description>
+        Parent
+    </description>
+
+
+
+
+    
+
+    <organization>
+        <name>lbruun.net</name>
+        <url>https://lbruun.net</url>
+    </organization>
+    
+    <licenses>        
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+    
+    <scm>
+        <!-- Note: For Maven Release Plugin: The 'project.scm.id' property 
+             will define which server-definition from settings.xml will be used. 
+             If this property is not set Maven will try to find a server-definition 
+             with the same id as the hostname in the URL below.           -->
+        <connection>scm:git:https://github.com/lbruun/aws-eb-packager.git</connection>
+        <developerConnection>scm:git:https://github.com/lbruun/aws-eb-packager.git</developerConnection>
+        <url>https://github.com/lbruun/aws-eb-packager</url>
+    </scm>    
+    
+    
+    <distributionManagement>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>    
+    
+    
+    <profiles>        
+        <profile> 
+            <id>release-to-central</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.6</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+    
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        
+        <!-- Determines which 'server' entry to use from settings.xml. -->
+        <project.scm.id>github.com-lbruun.net</project.scm.id>
+    </properties>
+
+    <developers>
+        <developer>
+            <name>Lars Bruun-Hansen</name>
+            <organization>lbruun.net</organization>
+        </developer>
+    </developers>
+</project>
