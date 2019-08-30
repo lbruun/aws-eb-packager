@@ -6,6 +6,7 @@
     <version>0.9.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>AWS Elastic Beanstalk Packager - Parent</name>
+    <url>https://github.com/lbruun/aws-eb-packager</url>
 
     <description>
         Parent
