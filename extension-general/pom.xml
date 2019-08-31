@@ -7,7 +7,7 @@
         <version>0.9.1</version>
     </parent>
     <artifactId>extension-general</artifactId>
-    <version>0.9.0</version>
+    <version>0.9.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>AWS Elastic Beanstalk Packager - extension-general</name>
 
@@ -50,8 +50,4 @@
 
     
     
-
-  <scm>
-    <tag>extension-general-0.9.0</tag>
-  </scm>
 </project>
