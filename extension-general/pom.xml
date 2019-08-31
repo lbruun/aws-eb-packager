@@ -48,6 +48,11 @@
     </build>
 
 
+    <scm>
+        <connection>scm:git:https://github.com/lbruun/aws-eb-packager.git</connection>
+        <developerConnection>scm:git:https://github.com/lbruun/aws-eb-packager.git</developerConnection>
+        <url>https://github.com/lbruun/aws-eb-packager</url>
+    </scm>    
     
-    
+
 </project>
