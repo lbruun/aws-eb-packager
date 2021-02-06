@@ -1,0 +1,3 @@
+# aws-eb-packager
+
+THIS LIBRARY IS NO LONGER MAINTAINED.
